@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>event위임과 핸들링</title>
+  <style>
+  </style>
+</head>
+<body>
+    <h1>오늘의 할 일</h1>
+    <ul class="itemList">
+        <li>
+            <input type="checkbox" id="item1">
+            <label for="item1">이벤트 버블링 학습</label>
+        </li>
+        <li>
+            <input type="checkbox" id="item2">
+            <label for="item2">이벤트 캡쳐 학습</label>
+        </li>
+    </ul>
+    <script>
+        // 나중에 목록(li)가 추가되어도 input클릭시에는 이벤트가 발생하게끔.
+        var itemList = document.querySelector('.itemList');
+        itemList.onclick = function(event) {
+            if (event.target.tagName === 'INPUT') {
+                alert('input');
+            } else {
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>
