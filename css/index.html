@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .parent_box {
+            overflow: hidden;
+            min-height: 100vh;
+            background-color: teal;
+        }
+        .parent_box  * {
+            float: left;
+        }
+        .left_box {
+            height: 100%;
+            width: 400px;
+            background-color: red;
+            line-height: 63px;
+        }
+        .right_box {
+            font-size: 14px;
+            width: calc(100% - 400px);
+            background-color: yellow;
+            line-height: 63px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent_box">
+        <div class="left_box">
+            강좌보기
+        </div>
+        <div class="right_box">
+            asdlkfj
+        </div>
+    </div>
+</body>
+</html>

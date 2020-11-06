@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .list_box {
+            font-size: 14px;
+            max-height: 500px;
+            overflow: auto;
+        }
+
+        input[id*="teacher_"] {
+            width: 0;
+            height: 0;
+        }
+
+        input[id*="teacher_"]::before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translate(-50%, -50%);
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url(./images/checkbox_default_off.png);
+        }
+
+        input[id*="teacher_"]:checked::before {
+            background-image: url(./images/checkbox_default_on.png);
+        }
+
+        .list_box ul {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .list_box li {
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            user-select: none;
+        }
+
+        .list_box ul:nth-child(even) li {
+            background-color: rgb(247, 249, 253);
+        }
+
+        .list_box li:nth-child(1) {width: 10%;}
+        .list_box li:nth-child(2) {width: 15%;}
+        .list_box li:nth-child(3) {width: 15%;}
+        .list_box li:nth-child(4) {width: 40%;}
+        .list_box li:nth-child(5) {width: 20%;}
+
+        .list_box ul:nth-child(1) li {
+            background-color: #F1F2F5;
+        }
+
+        input[id*="teacher_"]:checked + label > li {
+            background-color: #A7EBEB;
+        }
+    </style>
+</head>
+<body>
+    <div class="list_box">
+        <ul>
+            <li>선택</li>
+            <li>아이디</li>
+            <li>이름</li>
+            <li>이메일</li>
+            <li>연락처</li>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="teacher_1" id="teacher_1">
+            <label for="teacher_1">
+                <li>.</li>
+                <li>teacher012</li>
+                <li>홍길동</li>
+                <li>teacher012@naver.com</li>
+                <li>010-1234-1234</li>
+            </label>
+        </ul>
+        <ul>
+            <input type="checkbox" name="teacher_2" id="teacher_2">
+            <label for="teacher_2">
+                <li>.</li>
+                <li>teacher012</li>
+                <li>홍길동</li>
+                <li>teacher012@naver.com</li>
+                <li>010-1234-1234</li>
+            </label>
+        </ul>
+        <ul>
+            <input type="checkbox" name="teacher_3" id="teacher_3">
+            <label for="teacher_3">
+                <li>.</li>
+                <li>teacher012</li>
+                <li>홍길동</li>
+                <li>teacher012@naver.com</li>
+                <li>010-1234-1234</li>
+            </label>
+        </ul>
+        <ul>
+            <input type="checkbox" name="teacher_4" id="teacher_4">
+            <label for="teacher_4">
+                <li>.</li>
+                <li>teacher012</li>
+                <li>홍길동</li>
+                <li>teacher012@naver.com</li>
+                <li>010-1234-1234</li>
+            </label>
+        </ul>
+    </div>
+</body>
+</html>

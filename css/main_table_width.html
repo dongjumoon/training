@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {color: black;}
+
+        table {
+            border-collapse: collapse;
+        }
+        /* main 페이지 */
+
+        .main_contents {
+            margin-left: 230px;
+            width: calc(100% - 230px);
+            height: calc(100vh - 63px);
+            padding: 21px;
+            background-color: white;
+            overflow: auto;
+            min-width: 1400px;
+        }
+
+        .on_off_td {
+            position: relative;
+        }
+
+        .list_box table {
+            width: 100%;
+        }
+        .list_box thead {
+            background-color: #F1F2F5;
+        }
+        .list_box td {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .list_box tbody tr:nth-child(even) {
+            background-color: rgb(247, 249, 253);
+        }
+        .on_off_td input[type="checkbox"] {
+            width: 0;
+        }
+        .on_off_td input[type="checkbox"]::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 76px;
+            height: 26px;
+            background-image: url(./images/btn_states_off.png);
+        }
+
+        .lesson_view .on_off_td input[type="checkbox"]::before {
+            transform: translate(0, -6px);
+        }
+        .on_off_td input[type="checkbox"]:checked::before {
+            background-image: url(./images/btn_states_on.png);
+        }
+
+        .lesson_view {
+            margin: 18px 0 20px;
+        }
+
+        .list_box {
+            font-size: 14px;
+            max-height: 500px;
+            overflow: auto;
+        }
+
+        .list_box td:nth-child(1) {width: 10%;}
+        .list_box td:nth-child(2) {width: 30%;}
+        .list_box td:nth-child(3) {width: 30%;}
+        .list_box td:nth-child(4) {width: 20%;}
+        .list_box td:nth-child(5) {width: 10%;}
+    </style>
+</head>
+<body>
+    <div class="main_contents">
+        <div class="list_box">
+            <table>
+                <thead>
+                    <tr>
+                        <td>생성일시</td>
+                        <td>강좌명</td>
+                        <td>강좌 설명</td>
+                        <td>담당 강사</td>
+                        <td>공개여부</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_1" id="public_on_off_1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_2" id="public_on_off_2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_3" id="public_on_off_3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_4" id="public_on_off_4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_5" id="public_on_off_5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_6" id="public_on_off_6">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_7" id="public_on_off_7">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_8" id="public_on_off_8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_9" id="public_on_off_9">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2020.10.13 17:45</td>
+                        <td>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</td>
+                        <td>실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.</td>
+                        <td>Gildong123 / 홍길동 / 010-1234-1234</td>
+                        <td class="on_off_td">
+                            <input type="checkbox" name="public_on_off_10" id="public_on_off_10">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

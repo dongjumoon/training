@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        body > *{
+            float: left;
+        }
+        /* 핵심은 패딩과 line-height 
+            패딩을 주면 안되고 height와 line-height로 조절하되 line-height는 부모의 border를 고려하지 않음.
+        */
+        #ta {
+            width: 300px;
+            height: 50px;
+            line-height: 34px;
+            border: 8px solid red;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        input {
+            appearance: none;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            border: 8px solid red;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="ta">
+        <div><p>하하하하하하하하하핳하하하하하하하</p></div>
+        <ul>
+            <li>ㅎㅎ</li>
+            <li>ㅎㅎ</li>
+            <li>ㅎㅎ</li>
+        </ul>
+    </div>
+    <input type="text" name="" id="" value="하하하">
+</body>
+</html>

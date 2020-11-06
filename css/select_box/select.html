@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        /* 기준 높이 : font-16px, padding-10px 기준 넓이 : font */
+        input {
+            display: inline-block;
+            border: 4px solid #D5D5D5;
+            border-radius: 5px;
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #select_box {
+            display: inline-block;
+            font-size: 16px;
+            border: 4px solid #D5D5D5;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #select_title_box {
+            position: relative;
+        }
+        #select_value {
+            user-select: none;
+        }
+        #select_value::after {
+            content : '';
+            width: 20px;
+            height: 20px;
+            background-image: url(./ic_arrow_down.png);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+        #select_box li {
+            padding: 5px 0;
+        }
+        #select_box li:hover {
+            background-color: #1e90ff;
+            color: white;
+            width: 108px;
+        }
+        #select_box ul {
+            border: 4px solid #D5D5D5;
+            border-radius: 5px;
+            border-top: 0;
+            position: absolute;
+            display: none;
+            background-color: white;
+        }
+        #select_value {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="select_box">
+        <div id="select_title_box"><p id="select_value">공개여부</p></div>
+        <ul>
+            <li>공개</li>
+            <li>비공개</li>
+            <li>안공개</li>
+        </ul>
+    </div>
+    <input type="text" value="공개여부">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+    $(document).on('click', '#select_title_box', function() {
+        if($(this).attr('class') != 'open') {
+            $('#select_box ul').css('display', 'block');
+            $(this).addClass('open');
+        } else {
+            $(this).removeClass('open');
+            $('#select_box ul').css('display', 'none');
+        }
+    });
+
+    $(document).on('click', '#select_box li', function() {
+        $('#select_value').text($(this).text());
+        $('#select_title_box').removeClass('open');
+        $('#select_box ul').css('display', 'none');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .lesson_view .on_off_td input[type="checkbox"]::before {
+            transform: translate(0, -6px);
+        }
+        .on_off_td input[type="checkbox"]:checked::before {
+            background-image: url(../images/btn_states_on.png);
+        }
+
+        .lesson_add_form table,
+        .lesson_view {
+            margin: 18px 0 20px;
+        }
+
+        .lesson_add_form td,
+        .lesson_view li {
+            font-size: 14px;
+            border: 2px solid #F1F2F5;
+        }
+        .lesson_view li {
+            float: left;
+            line-height: 62px;
+        }
+        .lesson_add_form td:nth-child(1),
+        .lesson_view li:nth-child(1) {
+            width: 120px;
+            line-height: 62px;
+            text-align: center;
+            background-color: #F7F9FD;
+        }
+        .lesson_add_form td:nth-child(2),
+        .lesson_view li:nth-child(2) {
+            width: calc(100% - 120px);
+        }
+        .lesson_view li:nth-child(2) {
+            padding-left: 10px;
+        }
+        .teacher_search_btn {
+            background-color: #252D3A;
+            font-size: 16px;
+            padding: 10px;
+            vertical-align: middle;
+        }
+        .btn {
+            border: none;
+            background-color: #23CCCC;
+            border-radius: 4px;
+            color: white;
+        }
+        .teacher_info {
+            display: inline-block;
+            padding-right: 20px;
+        }
+        .description_title {
+            height: 300px;
+            line-height: 300px;
+        }
+        .description_value {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul li 로 바꿔보기, 부트스트랩 select box 참고 -->
+    <div class="lesson_view">
+        <ul>
+            <li>생성일시</dt>
+            <li>2020.10.14 14:32</li>
+        </ul>
+        <ul>
+            <li>강좌명</dt>
+            <li>급등주! 출발 신호의 법칙! 급등주는 출발 전 신호를 준다!</li>
+        </ul>
+        <ul>
+            <li class="description_title">강좌설명</dt>
+            <li class="description_value">
+                실전투자대회 1위 입상자의 매매 노하우를 알려드립니다.<br>
+            </li>
+        </ul>
+        <ul>
+            <li>담당 강사</dt>
+            <li>
+                <p class="teacher_info">Gildong123 / 이강훈 / 010-1234-1234</p>
+                <button class="btn teacher_search_btn">강사 검색</button>
+            </li>
+        </ul>
+        <ul>
+            <li>공개여부</dt>
+            <li class="on_off_td">
+                <input type="checkbox" name="public_on_off" id="public_on_off">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
