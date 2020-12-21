@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+    <button onclick="javascript: $('.recommand-popup-bg').show();">클릭</button>
+<div class="popup-bg recommand-popup-bg">
+	<div class="popup recommand-popup">
+		<p class="popup-title fs22">희망도서 신청</p>
+		<button type="button" class="popup-close btn-close-rcmdpop" title="팝업닫기"><span class="hidden">팝업닫기</span></button>
+		<div class="recommand-popup-tbl">
+			<form action="/eco">
+				<table>
+					<caption>희망 도서 신청</caption>
+					<tr>
+						<td>도서명</td>
+						<td>
+							<input type="text" id="bookName" name="bookName" maxlength="50">
+						</td>
+					</tr>
+					<tr>
+						<td>ISBN</td>
+						<td>
+							<input type="text" id="isbn" name="isbn" maxlength="20">
+						</td>
+					</tr>
+					<tr>
+						<td>출판사</td>
+						<td>
+							<input type="text" id="publisher" name="publisher" maxlength="25">
+						</td>
+					</tr>
+					<tr>
+						<td>저자</td>
+						<td>
+							<input type="text" id="author" name="author" maxlength="25">
+						</td>
+					</tr>
+					<tr>
+						<td>신청이유</td>
+						<td>
+							<textarea name="reason" id="reason" cols="30" rows="10" placeholder="간략히 입력해주세요(최대 100자)" maxlength="100"></textarea>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div>
+			<button type="button" class="popup-btn popup-close" title="취소">취소</button>
+			<button type="button" class="popup-btn" id="btnRegFav" title="등록">등록</button>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</body>
+</html>

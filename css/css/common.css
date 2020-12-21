@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+/*****************************************/
+/*	기본팝업스타일	*/
+/*****************************************/
+
+.popup-bg {
+	position: fixed;
+	background:rgba(0,0,0,0.6);
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index:2001;
+	display: none;
+}
+.popup {
+	background:#fff;
+	width: 500px;
+	height: 300px;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	position: absolute;
+	text-align: center;	
+	
+}
+.popup-title {
+	position: relative;
+	color:#fff;
+	height: 60px;
+	line-height: 60px;
+	background:#414650;
+	padding-left: 30px;
+	text-align: left;
+}
+.popup-title+button.popup-close {
+	width: 16px;
+	height: 16px;
+	background:url('../img/close.png') no-repeat center;
+	position: absolute;
+	top:10%;
+	margin-top: -8px;
+	right:20px;
+}
+.recommand-popup .popup-title+button.popup-close {
+	top:6%;
+}
+.popup-text {
+	color:#5a5a5a;
+	margin:60px 0;
+}
+.popup-btn {
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	border-radius:10px;
+	border:1px solid #1e8cc8;
+	color:#1e8cc8;
+	font-size:18px;
+}
+.popup-btn:hover {
+	background:#1e8cc8;
+	color:#fff;
+}
+.popup-btn.popup-close {
+	margin-right: 5px;
+}
+.popup-store {
+	margin-right: 5px;
+}
+
+/**/
+
+/*	레이아웃	*/
+.fl {float: left;}
+.fr {float: right;}
+
+/*	폰트사이즈	*/
+.fs13 {font-size:13px;}
+.fs15 {font-size:15px;}
+.fs17 {font-size:17px;}
+.fs18 {font-size:18px;}
+.fs20 {font-size:20px;}
+.fs22 {font-size:22px;}
+
+/*	텍스트정렬	*/
+.ta-c {text-align: center;}
+.ta-l {text-align: left;}
+.ta-r {text-align: right;}
+
+/*	padding	*/
+.pt5 {padding-top: 5px;}
+
+
+/*	margin	*/
+.m00 {margin:0 !important;}
+.mt20 {margin-top: 20px !important;}
+.mt30 {margin-top: 30px !important;}
+.mt50 {margin-top: 50px !important;}
+.mt100 {margin-top: 100px !important;}
+
+/*	border	*/
+.bt-none {
+	border-bottom:none !important;
+}
+/* PC */
+@media screen and (min-width: 1080px) {
+	.mobile {
+		display: none !important;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 1079px) {
+	.pc {
+		display: none !important;
+	}
+	header .logo-image {
+		width: 162px;
+		height: 18px;
+	}
+}
